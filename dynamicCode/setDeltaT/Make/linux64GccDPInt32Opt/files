@@ -1,0 +1,6 @@
+# dynamicCode:
+# SHA1 = 6fd834e7983a7b7d1e7e18e2effde4312afe577b
+
+SOURCE += codedFunctionObjectTemplate.C
+
+LIB = $(PWD)/../platforms/$(WM_OPTIONS)/lib/libsetDeltaT_6fd834e7983a7b7d1e7e18e2effde4312afe577b
