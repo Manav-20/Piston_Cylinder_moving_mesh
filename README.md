@@ -1,14 +1,17 @@
 # Cold-Flow Piston–Cylinder Simulation (OpenFOAM)
 
-## 📌 Overview
+## Overview
 This case simulates **cold-flow in a piston–cylinder engine** using OpenFOAM’s **dynamic mesh** capability.  
 The focus is on **mesh deformation** and **in-cylinder flow physics** (pressure rise, vortices) without combustion.  
 
 It is based on the `engineFoam/kivaTest` tutorial and modified for **cold-flow**.
+Implemented Arbitrary Lagrangian–Eulerian (ALE) mesh motion to capture piston kinematics.
+Analysed velocity field visualisations and mesh quality metrics to study vortex formation during compression and expansion.
+
 
 ---
 
-## ⚙️ Solver
+##  Solver
 - Recommended solver:  
   - `icoDyMEngine` (incompressible piston solver) **or**  
   - `rhoPimpleDyMFoam` (compressible cold-flow).  
@@ -17,7 +20,7 @@ It is based on the `engineFoam/kivaTest` tutorial and modified for **cold-flow**
 
 ---
 
-## 📂 Case Structure
+## Case Structure
 ```
 pistonColdFlow/
 ├── 0/ # Initial & boundary conditions (U, p, T, k, epsilon etc.)
@@ -34,7 +37,7 @@ pistonColdFlow/
 ```
 ---
 
-## 🚀 Running the Case
+## Running the Case
 1. Clean old results
    ```bash
    ./Allclean
